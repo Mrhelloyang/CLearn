@@ -1,8 +1,8 @@
 #include<stdio.h>
 int main()
 {
-	int n, a = 1, b = 1, c = 1;
-	int i, j;
+	int n, i, j;
+	long long a = 1, b = 1, c = 1;
 	scanf_s("%d", &n);
 	if (n == 0)
 	{
@@ -42,7 +42,7 @@ int main()
 					{
 						c *= s;
 					}
-					printf("%d, ", a / (b * c));
+					printf("%lld, ", a / (b * c));
 					//printf("c=%d ", c);
 					a = 1, b = 1, c = 1;
 					//printf("j=%d", j);
