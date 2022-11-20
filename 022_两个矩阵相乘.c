@@ -1,7 +1,7 @@
 #include<stdio.h>
 int main()
 {
-	int n, m, k, f;
+	int n, m, f, k;
 	scanf_s("%d%d", &n, &m);
 	int a[21][21],b[21][21],c[21][21];
 	for (int i = 0; i < n; i++)
@@ -30,12 +30,12 @@ int main()
 				c[i][j] += a[i][t] * b[t][j];
 			}
 		}
-		for (int j = 0; j < k - 1; j++)
+		for (int j = 0; j < k; j++)
 		{
 
 			printf("%d ", c[i][j]);
 		}
-		printf("%d\n", c[i][k - 1]);
+		printf("\n");
 	}
 	return 0;
 }
