@@ -13,9 +13,11 @@ void sort_word(char* words[], int n)
 	{
 		for (int j = 0; j < i - 1; j++)
 		{
-			if (*words[j] > *words[j + 1])//比较的是words指向的内存；
+			//if (*words[j] > *words[j + 1])//比较的是words指向的内存；//不能这样写
+			if (strcmp(words[j],words[j+1])>0)//比较，传的是有元素的地址，不是内存，strcmp比较的是字符串的首元素的ASCII码
+			//大于返回0，大于返大于0，小于返回小于0；前和后比；
 			{
-				char** tmp = words[j];//这里写一个星花还是两个星花？
+				char** tmp = words[j];//这里写一个星花还是两个星花？//这里写一个星花就行，不是指向而是把tmp定义成words的同类型；
 				words[j] = words[j + 1];
 				words[j + 1] = tmp;
 
