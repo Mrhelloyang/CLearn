@@ -7,8 +7,9 @@ typedef struct _ListNode
 // 在链表的末尾, 插入一个元素 n,  返回头节点地址
 ListNode* push_back(ListNode* header, int n)
 {
-    ListNode* p, * s;// TODO: 请实现此函数
-    p = (ListNode*)malloc(sizeof(ListNode));
+  // TODO: 请实现此函数
+    header = (ListNode*)malloc(sizeof(ListNode));
+   	ListNode* p, * s;
     s = header;
     while (s->next != NULL)
     {
@@ -16,6 +17,7 @@ ListNode* push_back(ListNode* header, int n)
     }
     if (s->next == NULL)
     {
+      	p= (ListNode*)malloc(sizeof(ListNode));
         p->value = n;
         s->next = p;
         p - next = NULL;
@@ -24,8 +26,10 @@ ListNode* push_back(ListNode* header, int n)
 // 查询元素n, 返回n第一次出现的节点地址
 ListNode* search(ListNode* header, int n)
 {
-    ListNode* p = header->next;
-    while (p != NULL && p->value = n)
+   	header = (ListNode*)malloc(sizeof(ListNode));
+    ListNode* p；
+     P= header->next;
+    while (p != NULL && p->value ！= n)
     {
         p = p->next;
     }
@@ -37,6 +41,7 @@ ListNode* search(ListNode* header, int n)
 // 删除链表中 node节点, 返回头节点地址
 ListNode* delete_node(ListNode* header, ListNode* node)
 {
+  	header = (ListNode*)malloc(sizeof(ListNode));
     ListNode* p = header;// TODO: 请实现此函数
     p = header->next;
     while (p->next != node)
@@ -45,7 +50,7 @@ ListNode* delete_node(ListNode* header, ListNode* node)
     }
     if (p->next == node)
     {
-        p - node = node->next;
+        p - next= node->next;
         free(node)
     }
     return header
