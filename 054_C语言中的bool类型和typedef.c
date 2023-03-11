@@ -21,3 +21,18 @@ typedef struct student
 2.代码移植
 3封装类型
 */
+/*
+#define宏定义和typedef的区别
+#include<stdio.h>
+#define dpchar char*
+#define int64 int//1，不要加分号2.把下边编译语句的所有int64出现的地方都替换成int；3.预处理语句
+int main()
+{
+        typedef int int32;//1.要加分号；2.把int改名为int32；3.编译语句
+        dpchar p1,p2;
+        printf("%lu,%lu\n",sizeof(p1),sizeof(p2));//8,1/这里是define只把第一个定义成了指针；这是缺陷      
+        typedef char* dpChar;
+        dpChar a1,a2;
+        printf("%lu,%lu\n",sizeof(a1),sizeof(a2));
+}
+*/
