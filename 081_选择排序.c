@@ -18,7 +18,6 @@ void sort_array(int *a,int n)
 {
 	for(int i=0;i<n-1;i++)
 	{
-	
 		for(int j=i+1;j<n;j++)
 		{
 			if(a[i]>a[j])
@@ -27,9 +26,7 @@ void sort_array(int *a,int n)
 				tmp=a[i];
 				a[i]=a[j];
 				a[j]=tmp;
-			
-			}
-		
+			}	
 		}
 	
 	}
@@ -37,9 +34,6 @@ void sort_array(int *a,int n)
         {
                 printf("%d ",a[i]);
         }
-
-
-
 }
 int main()
 {
@@ -47,6 +41,5 @@ int main()
 	int n=sizeof(a)/sizeof(*a);
 	rand_sum(a,n);
 	sort_array(a,n);
-	
 	return 0;
 }
