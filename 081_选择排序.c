@@ -3,7 +3,7 @@
 #include<stdlib.h>
 void rand_sum(int*a,int n)
 {
-	srand((unsigned int)time(NULL));
+	srand((unsigned int)time(NULL));//需要头文件<stdlib.h>和<time.h>
 	for(int i=0;i<10;i++)
 	{
 		*(a+i)=rand()%100;
