@@ -20,7 +20,7 @@ void sort_array(int *a,int n)
 	{
 		for(int j=i+1;j<n;j++)
 		{
-			if(a[i]>a[j])
+			if(a[i]>a[j])//与冒泡排序相似只不过先找最小的数
 			{
 				int tmp;
 				tmp=a[i];
