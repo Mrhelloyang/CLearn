@@ -12,7 +12,7 @@ void insert_array(int* a, int pos, int data, int* size)
 		a[i + 1] = a[i];
 	}
 	a[pos] = data;
-	*size=*size+1;
+	(*size)++;
 }
 void remove_array(int* a, int pos, int* size)
 {
@@ -21,7 +21,7 @@ void remove_array(int* a, int pos, int* size)
 		a[i] = a[i + 1];
 	}
 	//a[*size - 1] = NULL;
-	*size = *size - 1;
+	(*size)--;
 }
 void print_array(int* a, int size)//打印数组
 {
