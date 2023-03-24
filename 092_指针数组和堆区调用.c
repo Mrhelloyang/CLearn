@@ -55,7 +55,10 @@ void free_p(char*** p3, int len3)
 	{
 		free(p3[i]);
 	}
-	free(p3);
+	for (int i = 0; i < len3; i++)
+	{
+		free(p3+i);
+	}
 	p3 = NULL;
 }
 
