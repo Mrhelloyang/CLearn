@@ -20,7 +20,7 @@ int sort(char** p1, int len1, char buf2[][30], int len2, char*** p3, int len3)
 	for ( i = 0; i < len2; i++)
 	{
 		//strcpy(p[tmp], *(buf2 + i)); //*(buf2 + i)
-		strcpy(p[len1+i], *(buf2 + i));//这里的地址纠结了好久，肯定要是p[len1+1],
+		strcpy(p[len1+i], *(buf2 + i));//这里的地址纠结了好久，肯定要是p[len1+i],
 		//tmp++;
 	}
 	for (i = 0; i < len3; i++)
