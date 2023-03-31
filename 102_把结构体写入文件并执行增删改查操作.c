@@ -96,8 +96,8 @@ void my_delete01()
 }
 void my_delete()
 {
-	//读取
-	char ch [20]={0};
+    //读取
+    char ch [20]={0};
     printf("请输入需要删除的人名:\n");
     scanf("%s",ch);
 
@@ -109,16 +109,16 @@ void my_delete()
     }
     fseek(fp,0,SEEK_END);//光标移到结尾
     long len = ftell(fp);//文件的大小
-	fseek(fp,0,SEEK_SET);//光标移到开头
-	unsigned char* tmp = (unsigned char*)malloc(len);//相应大小的空间；
-	int ret= fread(tmp,sizeof(unsigned char),len,fp);//读取内容；
-	//printf("ret=%d\n",ret);
-    fclose(fp);//关闭文件；
-    fp = NULL;
+    fseek(fp,0,SEEK_SET);//光标移到开头
+    unsigned char* tmp = (unsigned char*)malloc(len);//相应大小的空间；
+    int ret= fread(tmp,sizeof(unsigned char),len,fp);//读取内容；
+    //printf("ret=%d\n",ret);
+     fclose(fp);//关闭文件；
+     fp = NULL;
 
 
-	//写
-	fp = fopen("hello.bat", "wb");//以只写的方式清空文件，然后打开；
+     //写
+    fp = fopen("hello.bat", "wb");//以只写的方式清空文件，然后打开；
     if (fp == NULL)
     {
         perror("fopen");
@@ -132,8 +132,8 @@ void my_delete()
     for (int i = 0; i < n; i++)
     {
 		//printf("strcmp=%d\n",strcmp(tmp1[i].name,ch));
-        //if (strcmp(tmp1[i].name, ch)!= 0);//低级错误总是会再犯，人不会在错误里面吸取教训；
-		if (strcmp(tmp1[i].name,ch)!=0)
+                 //if (strcmp(tmp1[i].name, ch)!= 0);//低级错误总是会再犯，人不会在错误里面吸取教训；
+	if (strcmp(tmp1[i].name,ch)!=0)
         {
 			//printf("%s %d\n",tmp1[i].name,tmp1[i].age);
 			fwrite(&tmp1[i],sizeof(student),1,fp);
