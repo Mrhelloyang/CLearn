@@ -28,9 +28,9 @@ int main()
 
 	char cmd[10];
 	int a, b, i;
-	printf("ÇëÊäÈëÖ¸Áî:\n");
-	scanf("%s %d %d",cmd,&a,&b);//²»ÒªÊ¹ÓÃscanf_s£¬×îºÃÊ¹ÓÃscanf
-	//scanf_s("%s %d %d", cmd, &a, &b);
+	printf("è¯·è¾“å…¥æŒ‡ä»¤:\n");
+	scanf("%s %d %d",cmd,&a,&b);//ä¸è¦ä½¿ç”¨scanf_sï¼Œæœ€å¥½ä½¿ç”¨scanf
+	//scanf_s("%s %d %d", cmd, &a, &b);//err
 	for (i = 0; i < n; i++)
 	{
 		if (strcmp(cmd, str[i]) == 0)
