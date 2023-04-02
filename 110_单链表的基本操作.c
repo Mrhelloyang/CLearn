@@ -39,7 +39,6 @@ Node* CreateListHead()
 	Node* pnew;
 	head = (Node*)malloc(sizeof(Node));
 	head->next = NULL;
-	int i = 0;
 	while (1)
 	{
 
@@ -51,17 +50,9 @@ Node* CreateListHead()
 		}
 
 		pnew = (Node*)malloc(sizeof(Node));
-		i++;
+		
 		//if(i=1)；=是赋值；判断要用==；不要再错了；
-		if (i == 1)
-
-		{
-			pnew->next = NULL;
-		}
-		else
-		{
-			pnew->next = head->next;
-		}
+		pnew->next = head->next;
 		pnew->id = tmp;
 		head->next = pnew;
 	}
