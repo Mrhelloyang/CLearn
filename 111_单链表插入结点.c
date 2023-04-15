@@ -33,7 +33,7 @@ Node* CreateListTail()
 	}
 	return head;//开始这里没写返回值；
 }
-void InsertNode(Node* head, int x, int y)
+void InsertNode(Node* head, int x, int y)//在x的前面插入y，如果没找到就在表尾插入；
 {
 	Node* pre;
 	Node* cur;
